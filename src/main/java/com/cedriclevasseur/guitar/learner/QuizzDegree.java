@@ -29,10 +29,10 @@ public class QuizzDegree {
         }
 
         Scale scale = Scale.of(note);
-        System.out.println("Scale of "+note+" : " + scale);
+        System.out.println("Gamme de "+note+" : " + scale);
 
         Scale mode = Mode.IONIAN.of(scale);
-        System.out.println("Scale of "+note+" in " + Mode.IONIAN + " mode : " + mode);
+        System.out.println("Gamme de "+note+" en " + Mode.IONIAN + " mode : " + mode);
 
         Scale chord = Chord.major(mode);
         System.out.println("Major chord : " + chord);

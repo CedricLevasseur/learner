@@ -5,13 +5,13 @@ package net.thecodersbreakfast.guitar;
  */
 public enum Mode {
 
-    IONIAN,  // Mode Majeur
-    DORIAN,
-    PHRYGIAN,
-    LYDIAN,
-    MIXOLYDIAN,
-    AEOLIAN,
-    LOCRIAN;
+    IONIAN("Mode de Do Majeur"),
+    DORIAN("Mode de Ré Majeur"),
+    PHRYGIAN("Mode de Mi Majeur"),
+    LYDIAN("Mode de Fa Majeur"),
+    MIXOLYDIAN("Mode de Sol Majeur"),
+    AEOLIAN("Mode de La Majeur"),
+    LOCRIAN("Mode de Si Majeur");
 
     private static final int[] IONAN_STEPS = {2, 2, 1, 2, 2, 2, 1};
     private static final int[] DORIAN_STEPS = {2, 1, 2, 2, 2, 1, 2};
@@ -21,6 +21,12 @@ public enum Mode {
     private void init_all_steps(){
         ALL_STEPS[0] = IONAN_STEPS;
         ALL_STEPS[1] = DORIAN_STEPS;
+    }
+    
+    private String description;
+
+    private Mode(String description) {
+        this.description = description;
     }
     
     public Scale of(Scale scale) {
@@ -42,6 +48,13 @@ public enum Mode {
             }            
         }
         return new Scale(notes);
+    }
+    
+    public String toString(){
+        return this.name()+" (="+description+")";
+        
+        
+        
     }
 
 }
