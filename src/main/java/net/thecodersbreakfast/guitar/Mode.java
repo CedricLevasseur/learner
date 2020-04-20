@@ -52,9 +52,6 @@ public enum Mode {
     
     public String toString(){
         return this.name()+" (="+description+")";
-        
-        
-        
     }
 
 }

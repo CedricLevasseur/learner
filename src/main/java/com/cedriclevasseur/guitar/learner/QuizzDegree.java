@@ -30,7 +30,14 @@ public class QuizzDegree {
 
         Scale scale = Scale.of(note);
         System.out.println("Gamme de "+note+" : " + scale);
-
+        Note tierce=scale.nth(5);
+        System.out.println("Tierce de "+note+" dans "+scale+" : " + tierce );
+        System.out.println(tierce+ " est la "+scale.getDegreeInt(tierce)+ " de "+ note);
+        
+        Quizz quizz = new Quizz();
+        quizz.quizz();
+        
+        
         Scale mode = Mode.IONIAN.of(scale);
         System.out.println("Gamme de "+note+" en " + Mode.IONIAN + " mode : " + mode);
 

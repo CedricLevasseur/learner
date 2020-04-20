@@ -18,7 +18,7 @@
     <build>
         <finalName>learner</finalName>
    <plugins>
-      <plugin>
+<!--      <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
         <executions>
@@ -41,7 +41,7 @@
             <argument>arg2</argument>
           </arguments>
         </configuration>
-      </plugin>
+      </plugin>-->
     </plugins>
     </build>
     <properties>

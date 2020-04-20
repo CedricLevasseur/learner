@@ -39,6 +39,7 @@ public enum Note {
     }
 
     public static Note readFromString( String str){
-        return Note.valueOf(str.replace('#','$'));
+        Note note= Note.valueOf(str.replace('#','$'));
+        return note;
     }
 }
